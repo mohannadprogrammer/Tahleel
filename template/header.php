@@ -121,27 +121,27 @@
             <ul class="navbar-list">
 
               <li>
-                <a href="#home" class="navbar-link" data-nav-link>Home</a>
+                <a href="./" class="navbar-link" data-nav-link>Home</a>
               </li>
 
               <li>
-                <a href="#about" class="navbar-link" data-nav-link>About</a>
+                <a href="./#about" class="navbar-link" data-nav-link>About</a>
               </li>
 
               <li>
-                <a href="#service" class="navbar-link" data-nav-link>Service</a>
+                <a href="./#service" class="navbar-link" data-nav-link>Service</a>
               </li>
 
               <li>
-                <a href="#property" class="navbar-link" data-nav-link>Property</a>
+                <a href="./#property" class="navbar-link" data-nav-link>Property</a>
               </li>
 
               <li>
-                <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+                <a href="./#blog" class="navbar-link" data-nav-link>Blog</a>
               </li>
 
               <li>
-                <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
+                <a href="./contact.php" class="navbar-link" data-nav-link>Contact</a>
               </li>
 
             </ul>
