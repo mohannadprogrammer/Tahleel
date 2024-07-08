@@ -1,5 +1,5 @@
 .header-bottom{
-    padding: 30px;
+    padding: 20px;
 }
 .logo{
     /* top:100px; */
@@ -7,4 +7,37 @@
 }
 .light-logo{
     width: 290px;
+}
+
+div.form-container{
+    display: flex;
+    justify-content: space-around;
+    padding:20px;
+    background: rgb(207, 206, 206);
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.input{
+    width: 600px;
+    margin:5px;
+    padding:10px;
+    border-style: none;
+    border-radius: 14px;
+}
+.input input{
+    width:100%;
+}
+.button{
+    padding:10px;
+    background-color: var(--yellow-green);
+    border: none;
+    border-radius: 10px;
+    color:white;
+}
+.button:is(:hover){
+    background-color: rgb(141, 228, 141);
 }
