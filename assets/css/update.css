@@ -13,7 +13,7 @@ div.form-container{
     display: flex;
     justify-content: space-around;
     padding:20px;
-    background: rgb(207, 206, 206);
+    background: rgb(235 235 235);
 }
 .form{
     display: flex;
@@ -30,6 +30,9 @@ div.form-container{
 }
 .input input{
     width:100%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
 }
 .button{
     padding:10px;
