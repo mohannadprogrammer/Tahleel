@@ -15,6 +15,15 @@ div.form-container{
     padding:20px;
     background: rgb(235 235 235);
 }
+.box{
+    display: flex;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px hsla(0, 0%, 0%, 0.3);
+
+
+}
 .form{
     display: flex;
     justify-content: center;
@@ -33,6 +42,7 @@ div.form-container{
     padding: 5px;
     border: none;
     border-radius: 5px;
+    background-color: lightgray;
 }
 .button{
     padding:10px;

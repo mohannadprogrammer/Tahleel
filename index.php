@@ -1,7 +1,8 @@
 <?php
 $title = 'Add Hospetl';
 require_once './template/header.php';
-// require_once './functions/database_functions.php';
+require_once './functions/database_functions.php';
+$result = getAllBlog();
 ?>
 
 
@@ -874,7 +875,62 @@ require_once './template/header.php';
           <h2 class="h2 section-title">Leatest News Feeds</h2>
 
           <ul class="blog-list has-scrollbar">
+            <?php
+              foreach ($result as $row){  ?>
+                <li>
+                <div class="blog-card">
 
+<figure class="card-banner">
+  <img src=<?= $row['topic_image']?> alt="The Most Inspiring Interior Design Of 2021" class="w-100">
+</figure>
+
+<div class="blog-content">
+
+  <div class="blog-content-top">
+
+    <ul class="card-meta-list">
+
+      <li>
+        <a href="#" class="card-meta-link">
+          <ion-icon name="person"></ion-icon>
+
+          <span>by: <?= $row['user_name']?></span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" class="card-meta-link">
+          <ion-icon name="pricetags"></ion-icon>
+
+          <span><?= $row['topic_name']?></span>
+        </a>
+      </li>
+
+    </ul>
+
+    <h3 class="h3 blog-title">
+      <a href="#"><?= $row['subject']?></a>
+    </h3>
+
+  </div>
+
+  <div class="blog-content-bottom">
+    <div class="publish-date">
+      <ion-icon name="calendar"></ion-icon>
+
+      <time datetime="2022-27-04"><?= $row['created_date']?></time>
+    </div>
+
+    <a href=".\blog.php?id=<?=$row["blog_id"]?>" class="read-more-btn">Read More</a>
+  </div>
+
+</div>
+
+</div>
+                </li>
+                <?php
+              }
+            ?>
             <li>
               <div class="blog-card">
 

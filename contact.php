@@ -12,7 +12,8 @@
     <article>
     <section class="contact" >
     <div class="form-container" >
-        <form autocomplete="off" method="post" class  = "form"enctype="application/x-www-form-urlencoded">
+        <div class = 'box'>
+            <form autocomplete="off" method="post" class  = "form"enctype="application/x-www-form-urlencoded">
            
         <h1>Contact us</h1>
            
@@ -36,6 +37,7 @@
 			
             <input type="submit" class ="button"name="<?= $action?>" value="send">
         </form>
+</div>
         <div></div>
     </div>
     </section>
