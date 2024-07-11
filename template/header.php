@@ -174,11 +174,16 @@ session_start();
             <button class="header-top-btn">Login</button>
           </a> -->
           <?php } else {?>
-            <button class="header-bottom-actions-btn" aria-label="Profile">
-            <ion-icon name="person-outline"></ion-icon>
+            <a href="./profile.php" >
+              <button class="header-bottom-actions-btn" aria-label="Profile" style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;">
+                <ion-icon name="person-outline"></ion-icon>
 
-            <span>Profile</span>
-          </button>
+                <span>Profile</span>
+          </button></a>
           <?php }?>
           
 
