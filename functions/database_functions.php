@@ -38,6 +38,18 @@ function getAllBlogsbyID($id)
     }
     return mysqli_fetch_assoc($result);
 }
+function getAllProperties()
+{
+    $conn = db_connect();
+    $query = "SELECT * FROM `properties`  , `user`  WHERE  properties.user_id = user.id ";
+    $result = mysqli_query($conn, $query);
+    if (!$result) {
+        echo 'get services price failed! '.mysqli_error($conn);
+        exit;
+    }
+    return $result;
+}
+
 function deleteHospitle($id)
 {
     $conn = db_connect();

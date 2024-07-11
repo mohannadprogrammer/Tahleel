@@ -3,6 +3,7 @@ $title = 'Add Hospetl';
 require_once './template/header.php';
 require_once './functions/database_functions.php';
 $result = getAllBlog();
+$pro = getAllProperties();
 ?>
 
 
@@ -231,7 +232,7 @@ $result = getAllBlog();
           <h2 class="h2 section-title">Featured Listings</h2>
 
           <ul class="property-list has-scrollbar">
-
+          <?php foreach ($pro as $row){ ?>
             <li>
               <div class="property-card">
 
@@ -240,15 +241,14 @@ $result = getAllBlog();
                   <a href="#">
                     <img src="./assets/images/property-1.jpg" alt="New Apartment Nice View" class="w-100">
                   </a>
-
-                  <div class="card-badge green">For Rent</div>
-
+                  <div class="card-badge green">For <?=$row["service"]?>111</div>
+                    
                   <div class="banner-actions">
 
                     <button class="banner-actions-btn">
                       <ion-icon name="location"></ion-icon>
 
-                      <address>Belmont Gardens, Chicago</address>
+                      <address><?=$row['city'].",".$row['hood'] ?></address>
                     </button>
 
                     <button class="banner-actions-btn">
@@ -270,21 +270,21 @@ $result = getAllBlog();
                 <div class="card-content">
 
                   <div class="card-price">
-                    <strong>$34,900</strong>/Month
+                    <strong><?=$row['price']?></strong><?php if($row['service']=='Sale'){echo '/Month';}?>
                   </div>
 
                   <h3 class="h3 card-title">
-                    <a href="#">New Apartment Nice View</a>
+                    <a href="#"><?=$row['name']?></a>
                   </h3>
 
                   <p class="card-text">
-                    Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood
+                  <?=$row['description']?>
                   </p>
 
                   <ul class="card-list">
 
                     <li class="card-item">
-                      <strong>3</strong>
+                      <strong><?=$row['num_bedrooms']?></strong>
 
                       <ion-icon name="bed-outline"></ion-icon>
 
@@ -292,7 +292,7 @@ $result = getAllBlog();
                     </li>
 
                     <li class="card-item">
-                      <strong>2</strong>
+                      <strong><?=$row['num_bathrooms']?></strong>
 
                       <ion-icon name="man-outline"></ion-icon>
 
@@ -300,7 +300,7 @@ $result = getAllBlog();
                     </li>
 
                     <li class="card-item">
-                      <strong>3450</strong>
+                      <strong><?=$row['square']?></strong>
 
                       <ion-icon name="square-outline"></ion-icon>
 
@@ -321,7 +321,7 @@ $result = getAllBlog();
 
                     <div>
                       <p class="author-name">
-                        <a href="#">William Seklo</a>
+                        <a href="#"><?=$row['user_name']?></a>
                       </p>
 
                       <p class="author-title">Estate Agents</p>
@@ -349,7 +349,7 @@ $result = getAllBlog();
 
               </div>
             </li>
-
+          <?php }  ?>
             <li>
               <div class="property-card">
 
