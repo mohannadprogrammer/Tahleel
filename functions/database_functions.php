@@ -270,7 +270,7 @@ function getAlluserbyID($id)
 function login($email ,$password)
 {
     $conn = db_connect();
-    $query = "SELECT * FROM `user` WHERE email_user = '$email'  and password_user ='$password' ";
+    $query = "SELECT * FROM `user` WHERE email_user = '$email'  and password ='$password' ";
     $result = mysqli_query($conn, $query);
     if (!$result) {
         echo 'get services  failed! '.mysqli_error($conn);

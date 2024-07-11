@@ -1,3 +1,8 @@
+<?php 
+session_start();
+// echo $_SESSION['user_info']['email_user'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,8 +95,15 @@
             </li>
 
           </ul>
-
-          <button class="header-top-btn">Add Listing</button>
+          <?php if (!isset ($_SESSION['user_info']['email_user'])) {?>
+          <a href="./login.php" class="logo">
+            <button class="header-top-btn">Login</button>
+          </a>
+          <?php } else {?>
+            <a href="./admin_signout.php" class="logo">
+            <button class="header-top-btn">Logout</button>
+          </a>
+          <?php }?>
         </div>
 
       </div>
@@ -101,7 +113,7 @@
       <div class="container">
 
         <a href="#" class="logo">
-          <img src="./assets/images/logovername.svg" alt="Homeverse logo">
+          <img src="./assets/images/logovername.svg" alt="Tahleel logo">
         </a>
 
         <nav class="navbar" data-navbar>
@@ -152,23 +164,29 @@
 
         <div class="header-bottom-actions">
 
-          <button class="header-bottom-actions-btn" aria-label="Search">
+          <!-- <button class="header-bottom-actions-btn" aria-label="Search">
             <ion-icon name="search-outline"></ion-icon>
 
             <span>Search</span>
-          </button>
-
-          <button class="header-bottom-actions-btn" aria-label="Profile">
+          </button> -->
+          <?php if (!isset ($_SESSION['user_info']['email_user'])) {?>
+          <!-- <a href="./login.php" class="logo">
+            <button class="header-top-btn">Login</button>
+          </a> -->
+          <?php } else {?>
+            <button class="header-bottom-actions-btn" aria-label="Profile">
             <ion-icon name="person-outline"></ion-icon>
 
             <span>Profile</span>
           </button>
+          <?php }?>
+          
 
-          <button class="header-bottom-actions-btn" aria-label="Cart">
+          <!-- <button class="header-bottom-actions-btn" aria-label="Cart">
             <ion-icon name="cart-outline"></ion-icon>
 
             <span>Cart</span>
-          </button>
+          </button> -->
 
           <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
             <ion-icon name="menu-outline"></ion-icon>
