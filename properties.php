@@ -8,7 +8,7 @@
     $phone="";
     $massage="";
 
-    $result1 = getAllMessages();
+    $result1 = getAllProperties();
 
 
 
@@ -20,8 +20,8 @@
     <div class = 'menu'>
              
              <a href="./profile.php" >profile</a>
-             <a href="./masseges.php" class="active">Massages</a>
-             <a href="./properties.php">Properties</a>
+             <a href="./masseges.php" >Massages</a>
+             <a href="./properties.php" class="active">Properties</a>
              <a href="./admin_blogs.php">Blogs</a>
          </div>
         <div class = 'table'>
@@ -29,9 +29,14 @@
         <thead>
             <tr>
             <th>name</th> 
-            <th>email</th> 
-            <th>phone number</th> 
-            <th>message</th> 
+            <th>description</th> 
+            <th>Sarvice</th> 
+            <th>number of bedrooms</th> 
+            <th>number of bathrooms</th> 
+            <th>Square</th> 
+            <th>price</th> 
+            <th>city</th> 
+            <th>hood</th> 
             </tr>
         </thead>
         <tbody>
@@ -41,10 +46,15 @@
 ?>
             <tr>
                 
-<td><?=$row['name']?></td>
-                <td><?=$row['email']?></td>
-                <td><?=$row['phone_number']?></td>
-                <td><?=$row['message']?></td>
+                <td><?=$row['name']?></td>
+                <td><?=$row['description']?></td>
+                <td><?=$row['service']?></td>
+                <td><?=$row['num_bedrooms']?></td>
+                <td><?=$row['num_bathrooms']?></td>
+                <td><?=$row['square']?></td>
+                <td><?=$row['price']?></td>
+                <td><?=$row['city']?></td>
+                <td><?=$row['hood']?></td>
             </tr>
 
 <?php

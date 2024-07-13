@@ -29,8 +29,8 @@
              
              <a href="./profile.php" class="active">profile</a>
              <a href="./masseges.php">Massages</a>
-             <a href="./profile.php">Properties</a>
-             <a href="./profile.php">Blogs</a>
+             <a href="./properties.php">Properties</a>
+             <a href="./admin_blogs.php">Blogs</a>
          </div>
         <div class = 'table'>
         <table class="data">
