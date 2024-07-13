@@ -2,11 +2,16 @@
 <?php
     $title = 'Add Hospetl';
     require_once './template/header.php';
-    // require_once './functions/database_functions.php';
+    require_once './functions/database_functions.php';
     $name="";
     $email="";
     $phone="";
     $massage="";
+
+    $result1 = getAllMessages();
+
+
+
     ?>
     <main>
     <article>
@@ -23,70 +28,35 @@
         <table class="data">
         <thead>
             <tr>
-            <th>name</th>
-            <th>وصف الغرفة</th>
-            <th>سعر اليوم</th>  
-            <th>نوع الغرفة</th>
-            <th> المستشفي</th>
-            <th>حالة الغرفة</th> 
-            <th>العمليات</th> 
+            <th>name</th> 
+            <th>email</th> 
+            <th>phone number</th> 
+            <th>message</th> 
             </tr>
         </thead>
         <tbody>
+        <?php 
+                    if($result1){
+                        foreach ($result1 as $row){
+?>
             <tr>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
+                
+<td><?=$row['name']?></td>
+                <td><?=$row['email']?></td>
+                <td><?=$row['phone_number']?></td>
+                <td><?=$row['message']?></td>
             </tr>
-            <tr>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-            </tr>
-            <tr>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-            </tr>
-            <tr>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-            </tr>
-            <tr>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-            </tr>
-            <tr>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-                <td>22k</td>
-            </tr>
+
+<?php
+                    }}else{
+?>
+
+<?php
+                    }
+                    ?>
+                
+
+           
         </tbody>
             </table>
         </div>

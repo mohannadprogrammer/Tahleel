@@ -305,38 +305,11 @@ function regstrion( $name_user, $email_user, $phone_user, $address_user, $nation
 }
 
 
-function deleteuser($id)
+
+function getAllMessages()
 {
     $conn = db_connect();
-    $query = "DELETE FROM `user` where id_user = ".$id;
-    $result = mysqli_query($conn, $query);
-    if (!$result) {
-        echo 'get services  failed! '.mysqli_error($conn);
-        exit;
-    }
-    return true;
-}
-
-
-function booking_room( $booking_room_id, $booking_user_id)
-{
-    $conn = db_connect();
-    $query = "INSERT INTO `booking`( `booking_user_id`, `booking_room_id`) 
-    VALUES ($booking_user_id,$booking_room_id)
-";
-    $result = mysqli_query($conn, $query);
-    if (!$result) {
-        echo 'get services  failed! '.mysqli_error($conn);
-        exit;
-    }
-    return $result;
-}
-
-function getAllbooking()
-{
-    $conn = db_connect();
-    $query = "SELECT * FROM `rooms`  , `room_type` ,`hospitle` ,`booking`,`user` WHERE status_room = 'حجز' and booking.booking_user_id = user.id_user and booking.booking_room_id = rooms.id_room and room_type.room_type_id = rooms.tybe_room and rooms.hospitle_room = hospitle.id_hospitle ;
-    ";
+    $query = "SELECT * FROM `message` ";
     $result = mysqli_query($conn, $query);
     if (!$result) {
         echo 'get services  failed! '.mysqli_error($conn);
