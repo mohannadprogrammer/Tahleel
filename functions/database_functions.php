@@ -270,13 +270,25 @@ function getAlluserbyID($id)
 function login($email ,$password)
 {
     $conn = db_connect();
-    $query = "SELECT * FROM `user` WHERE email_user = '$email'  and password ='$password' ";
+    $query = "SELECT * FROM `user` , `user_type` WHERE email_user = '$email'  and password ='$password' and user.type = user_type.id ";
     $result = mysqli_query($conn, $query);
     if (!$result) {
         echo 'get services  failed! '.mysqli_error($conn);
         exit;
     }
     return mysqli_fetch_assoc($result);
+}
+
+function change_password($user_id , $oldpassword,$newpassword){
+    $conn = db_connect();
+    $query = "UPDATE `user` SET password = '$newpassword'  WHERE `id`='$user_id' and password = '$oldpassword'";
+    $result = mysqli_query($conn, $query);
+    if (!$result) {
+        echo 'change_password want wronge! '.mysqli_error($conn);
+        exit;
+    }
+    return $result;
+
 }
 
 function regstrion( $name_user, $email_user, $phone_user, $address_user, $nationl_num_user, $password_user, $type_user)
@@ -347,41 +359,6 @@ function getAllbooking_sure()
     }
     // $row = mysqli_fetch_array($result);
     return $result;
-}
-
-
-
-function sure_booking_room($id_room){
-    $conn = db_connect();
-    $query = "UPDATE `rooms` SET status_room = 'حجز مؤكد'  WHERE `id_room`=".$id_room;
-    $result = mysqli_query($conn, $query);
-    if (!$result) {
-        echo 'get services  failed! '.mysqli_error($conn);
-        exit;
-    }
-    return true;
-
-}
-function booking_room_api($id_room){
-    $conn = db_connect();
-    $query = "UPDATE `rooms` SET status_room = 'حجز'  WHERE `id_room`=".$id_room;
-    $result = mysqli_query($conn, $query);
-    if (!$result) {
-        echo 'get services  failed! '.mysqli_error($conn);
-        exit;
-    }
-    return true;
-}
-
-function close_booking_room($id_room){
-    $conn = db_connect();
-    $query = "UPDATE `rooms` SET status_room = 'فارغة'  WHERE `id_room`=".$id_room;
-    $result = mysqli_query($conn, $query);
-    if (!$result) {
-        echo 'get services  failed! '.mysqli_error($conn);
-        exit;
-    }
-    return true;
 }
 
 
