@@ -224,6 +224,22 @@ function addMessage($name,$email,$phone,$message)
     }
     return true;
 }
+function addProperty($name,$des,$service,$city,$hood,
+$num_bed,$num_bath,$square,$price , $user_id ,$image)
+{
+    $conn = db_connect();
+    $query = "INSERT INTO `properties`( `name`, `description`, `service`, `city`,
+    `hood`, `num_bedrooms`, `num_bathrooms`, `square`,`price`,
+     `user_id`, `image`) VALUES 
+    ('$name','$des','$service','$city','$hood',
+'$num_bed','$num_bath','$square','$price' , '$user_id' ,'$image' )";
+    $result = mysqli_query($conn, $query);
+    if (!$result) {
+        echo 'get services  failed! '.mysqli_error($conn);
+        exit;
+    }
+    return true;
+}
 function editrooms($id_room,$info_rome,$price_room,$hospitle_room,$tybe_room)
 {
     $conn = db_connect();
