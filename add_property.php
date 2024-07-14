@@ -38,32 +38,32 @@
            
 			<br>
             <div class="input">
-                <input   type="text" name="name"  id="ucname" maxlength="50" placeholder="name" require>
+                <input  required type="text" name="name"  id="ucname" maxlength="50" placeholder="name" require>
 			</div>
             <div class="input">
-                <textarea   type="textarea" name="description"    placeholder="Description" require></textarea> 
+                <textarea required  type="textarea" name="description"    placeholder="Description" require></textarea> 
 			</div>
             <div class="input">
-					<select    name="service">
+					<select required   name="service">
 						<option value="">Service type</option>
 						<option value= 'Sale'>Sale</option>
 						<option value= 'Rent'>Rent</option>
 					</select>
 				</div>
 			<div class="input">
-                <input   type="text" name="city"  id="ucname" maxlength="50" placeholder="city" require>
+                <input  required type="text" name="city"  id="ucname" maxlength="50" placeholder="city" require>
             </div>
             <div class="input">
-                <input   type="text" name="hood"  id="ucname" maxlength="50" placeholder="hood" require>
+                <input required  type="text" name="hood"  id="ucname" maxlength="50" placeholder="hood" require>
 			</div>
-            <div class="input" style="display: flex;justify-content: space-between;">
+            <div required class="input" style="display: flex;justify-content: space-between;">
                 <input   type="number" name="num_bed"  id="ucname" maxlength="50" placeholder="nubmer of bedrooms" require>
                 <input   type="number" name="num_bath"  id="ucname" maxlength="50" placeholder="nubmer of bathrooms" require>
                 <input   type="number" name="square"  id="ucname" maxlength="50" placeholder="square" require>
                 <input   type="number" name="price"  id="ucname" maxlength="50" placeholder="price" require>
 			</div>
             <div class="input" >
-                <input   type="file" name="image"  id="ucname" maxlength="50" placeholder="image" require>
+                <input required  type="file" name="image"  id="ucname" maxlength="50" placeholder="image" require>
 			</div>
             
             
