@@ -212,11 +212,11 @@ function deleterooms($id)
     }
     return true;
 }
-function addrooms($info_rome,$price_room,$hospitle_room,$tybe_room,$status_room)
+function addMessage($name,$email,$phone,$message)
 {
     $conn = db_connect();
-    $query = "INSERT INTO `rooms`( `info_rome`, `price_room`, `hospitle_room`, `tybe_room`, `status_room`) VALUES ('$info_rome',$price_room,$hospitle_room,$tybe_room,'$status_room')";
-    var_dump($query);
+    $query = "INSERT INTO `message`( `name`, `email`, `phone_number`, `message`) VALUES 
+    ('$name','$email','$phone','$message' )";
     $result = mysqli_query($conn, $query);
     if (!$result) {
         echo 'get services  failed! '.mysqli_error($conn);
