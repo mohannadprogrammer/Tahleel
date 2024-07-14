@@ -24,7 +24,12 @@
              <a href="./properties.php" class="active">Properties</a>
              <a href="./admin_blogs.php">Blogs</a>
          </div>
-        <div class = 'table'>
+        <div class = 'table' style="
+    flex-direction: column;
+">
+        <a href="./add_property.php" class="logo">
+            <button class="header-top-btn" style="background:green;">add property</button>
+          </a>
         <table class="data">
         <thead>
             <tr>

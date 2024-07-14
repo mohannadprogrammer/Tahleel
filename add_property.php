@@ -22,7 +22,7 @@
         // echo "<alert>Message send successfully</alert>";
         // redirct('rooms.php');
     }else{
-        echo "<alert>32222222222222222222222</alert>";
+        // echo "<alert>32222222222222222222222</alert>";
 
     }
     

@@ -224,6 +224,8 @@ function addMessage($name,$email,$phone,$message)
     }
     return true;
 }
+
+//property add function in database
 function addProperty($name,$des,$service,$city,$hood,
 $num_bed,$num_bath,$square,$price , $user_id ,$image)
 {
@@ -233,6 +235,19 @@ $num_bed,$num_bath,$square,$price , $user_id ,$image)
      `user_id`, `image`) VALUES 
     ('$name','$des','$service','$city','$hood',
 '$num_bed','$num_bath','$square','$price' , '$user_id' ,'$image' )";
+    $result = mysqli_query($conn, $query);
+    if (!$result) {
+        echo 'get services  failed! '.mysqli_error($conn);
+        exit;
+    }
+    return true;
+}
+function addblog($subject,$topic,$content,$user_id,$image)
+{
+    $conn = db_connect();
+    $query = "INSERT INTO `blogs`( `subject`, `topic`, `content`,`created_by`, `topic_image`) VALUES 
+    ('$subject','$topic','$content','$user_id','$image')";
+    
     $result = mysqli_query($conn, $query);
     if (!$result) {
         echo 'get services  failed! '.mysqli_error($conn);
@@ -255,10 +270,10 @@ function editrooms($id_room,$info_rome,$price_room,$hospitle_room,$tybe_room)
 
 
 /////////////////////////////////////////////////////////////////
-function getAlluser()
+function getAllTopic()
 {
     $conn = db_connect();
-    $query = "SELECT * FROM `user` ";
+    $query = "SELECT * FROM `topic` ";
     $result = mysqli_query($conn, $query);
     if (!$result) {
         echo 'get services  failed! '.mysqli_error($conn);
