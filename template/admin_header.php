@@ -1,7 +1,10 @@
 <?php 
 session_start();
 // echo $_SESSION['user_info']['email_user'];
-
+if (!isset($_SESSION['user_info']) && $_SESSION['user_info']['type']!=1){
+  echo "<script> window.location.href = './index.php'</script>";
+  
+}
 ?>
 
 <!DOCTYPE html>

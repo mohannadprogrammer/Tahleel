@@ -1,5 +1,5 @@
 <?php
-$title = 'Add Hospetl';
+$title = 'Tahleel Real Estate - Home';
 require_once './template/header.php';
 require_once './functions/database_functions.php';
 $result = getAllBlog();
@@ -231,17 +231,22 @@ $pro = getAllProperties();
 
           <h2 class="h2 section-title">Featured Listings</h2>
 
-          <ul class="property-list has-scrollbar">
-          <?php foreach ($pro as $row){ ?>
+          
+          <?php 
+          if (mysqli_num_rows($pro)>0){
+            ?>
+            <ul class="property-list has-scrollbar">
+            <?php
+            foreach ($pro as $row){ ?>
             <li>
               <div class="property-card">
 
                 <figure class="card-banner">
 
                   <a href="#">
-                    <img src="./assets/images/property-1.jpg" alt="New Apartment Nice View" class="w-100">
+                    <img src="<?=$row["image"]?>" alt="New Apartment Nice View" class="w-100">
                   </a>
-                  <div class="card-badge green">For <?=$row["service"]?>111</div>
+                  <div class="card-badge green">For <?=$row["service"]?></div>
                     
                   <div class="banner-actions">
 
@@ -270,7 +275,7 @@ $pro = getAllProperties();
                 <div class="card-content">
 
                   <div class="card-price">
-                    <strong><?=$row['price']?></strong><?php if($row['service']=='Sale'){echo '/Month';}?>
+                    <strong><?=$row['price']?> AED</strong><?php if($row['service']=='Rent'){echo '/Month';}?>
                   </div>
 
                   <h3 class="h3 card-title">
@@ -349,362 +354,22 @@ $pro = getAllProperties();
 
               </div>
             </li>
-          <?php }  ?>
-            <li>
-              <div class="property-card">
+          <?php }
+          ?>
+            </ul>
+          
+          <?php
+        }else{
+          ?>
+
+            <p class="callout" style="
+    text-align: center;">
+              "there is no properties to show "
+            </p>
+          <?php
+        }  ?>
+            
 
-                <figure class="card-banner">
-
-                  <a href="#">
-                    <img src="./assets/images/property-2.jpg" alt="Modern Apartments" class="w-100">
-                  </a>
-
-                  <div class="card-badge orange">For Sales</div>
-
-                  <div class="banner-actions">
-
-                    <button class="banner-actions-btn">
-                      <ion-icon name="location"></ion-icon>
-
-                      <address>Belmont Gardens, Chicago</address>
-                    </button>
-
-                    <button class="banner-actions-btn">
-                      <ion-icon name="camera"></ion-icon>
-
-                      <span>4</span>
-                    </button>
-
-                    <button class="banner-actions-btn">
-                      <ion-icon name="film"></ion-icon>
-
-                      <span>2</span>
-                    </button>
-
-                  </div>
-
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-price">
-                    <strong>$34,900</strong>/Month
-                  </div>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Modern Apartments</a>
-                  </h3>
-
-                  <p class="card-text">
-                    Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood
-                  </p>
-
-                  <ul class="card-list">
-
-                    <li class="card-item">
-                      <strong>3</strong>
-
-                      <ion-icon name="bed-outline"></ion-icon>
-
-                      <span>Bedrooms</span>
-                    </li>
-
-                    <li class="card-item">
-                      <strong>2</strong>
-
-                      <ion-icon name="man-outline"></ion-icon>
-
-                      <span>Bathrooms</span>
-                    </li>
-
-                    <li class="card-item">
-                      <strong>3450</strong>
-
-                      <ion-icon name="square-outline"></ion-icon>
-
-                      <span>Square Ft</span>
-                    </li>
-
-                  </ul>
-
-                </div>
-
-                <div class="card-footer">
-
-                  <div class="card-author">
-
-                    <figure class="author-avatar">
-                      <img src="./assets/images/author.jpg" alt="William Seklo" class="w-100">
-                    </figure>
-
-                    <div>
-                      <p class="author-name">
-                        <a href="#">William Seklo</a>
-                      </p>
-
-                      <p class="author-title">Estate Agents</p>
-                    </div>
-
-                  </div>
-
-                  <div class="card-footer-actions">
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="resize-outline"></ion-icon>
-                    </button>
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="heart-outline"></ion-icon>
-                    </button>
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="add-circle-outline"></ion-icon>
-                    </button>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="property-card">
-
-                <figure class="card-banner">
-
-                  <a href="#">
-                    <img src="./assets/images/property-3.jpg" alt="Comfortable Apartment" class="w-100">
-                  </a>
-
-                  <div class="card-badge green">For Rent</div>
-
-                  <div class="banner-actions">
-
-                    <button class="banner-actions-btn">
-                      <ion-icon name="location"></ion-icon>
-
-                      <address>Belmont Gardens, Chicago</address>
-                    </button>
-
-                    <button class="banner-actions-btn">
-                      <ion-icon name="camera"></ion-icon>
-
-                      <span>4</span>
-                    </button>
-
-                    <button class="banner-actions-btn">
-                      <ion-icon name="film"></ion-icon>
-
-                      <span>2</span>
-                    </button>
-
-                  </div>
-
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-price">
-                    <strong>$34,900</strong>/Month
-                  </div>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Comfortable Apartment</a>
-                  </h3>
-
-                  <p class="card-text">
-                    Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood
-                  </p>
-
-                  <ul class="card-list">
-
-                    <li class="card-item">
-                      <strong>3</strong>
-
-                      <ion-icon name="bed-outline"></ion-icon>
-
-                      <span>Bedrooms</span>
-                    </li>
-
-                    <li class="card-item">
-                      <strong>2</strong>
-
-                      <ion-icon name="man-outline"></ion-icon>
-
-                      <span>Bathrooms</span>
-                    </li>
-
-                    <li class="card-item">
-                      <strong>3450</strong>
-
-                      <ion-icon name="square-outline"></ion-icon>
-
-                      <span>Square Ft</span>
-                    </li>
-
-                  </ul>
-
-                </div>
-
-                <div class="card-footer">
-
-                  <div class="card-author">
-
-                    <figure class="author-avatar">
-                      <img src="./assets/images/author.jpg" alt="William Seklo" class="w-100">
-                    </figure>
-
-                    <div>
-                      <p class="author-name">
-                        <a href="#">William Seklo</a>
-                      </p>
-
-                      <p class="author-title">Estate Agents</p>
-                    </div>
-
-                  </div>
-
-                  <div class="card-footer-actions">
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="resize-outline"></ion-icon>
-                    </button>
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="heart-outline"></ion-icon>
-                    </button>
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="add-circle-outline"></ion-icon>
-                    </button>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="property-card">
-
-                <figure class="card-banner">
-
-                  <a href="#">
-                    <img src="./assets/images/property-4.png" alt="Luxury villa in Rego Park" class="w-100">
-                  </a>
-
-                  <div class="card-badge green">For Rent</div>
-
-                  <div class="banner-actions">
-
-                    <button class="banner-actions-btn">
-                      <ion-icon name="location"></ion-icon>
-
-                      <address>Belmont Gardens, Chicago</address>
-                    </button>
-
-                    <button class="banner-actions-btn">
-                      <ion-icon name="camera"></ion-icon>
-
-                      <span>4</span>
-                    </button>
-
-                    <button class="banner-actions-btn">
-                      <ion-icon name="film"></ion-icon>
-
-                      <span>2</span>
-                    </button>
-
-                  </div>
-
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-price">
-                    <strong>$34,900</strong>/Month
-                  </div>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Luxury villa in Rego Park</a>
-                  </h3>
-
-                  <p class="card-text">
-                    Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood
-                  </p>
-
-                  <ul class="card-list">
-
-                    <li class="card-item">
-                      <strong>3</strong>
-
-                      <ion-icon name="bed-outline"></ion-icon>
-
-                      <span>Bedrooms</span>
-                    </li>
-
-                    <li class="card-item">
-                      <strong>2</strong>
-
-                      <ion-icon name="man-outline"></ion-icon>
-
-                      <span>Bathrooms</span>
-                    </li>
-
-                    <li class="card-item">
-                      <strong>3450</strong>
-
-                      <ion-icon name="square-outline"></ion-icon>
-
-                      <span>Square Ft</span>
-                    </li>
-
-                  </ul>
-
-                </div>
-
-                <div class="card-footer">
-
-                  <div class="card-author">
-
-                    <figure class="author-avatar">
-                      <img src="./assets/images/author.jpg" alt="William Seklo" class="w-100">
-                    </figure>
-
-                    <div>
-                      <p class="author-name">
-                        <a href="#">William Seklo</a>
-                      </p>
-
-                      <p class="author-title">Estate Agents</p>
-                    </div>
-
-                  </div>
-
-                  <div class="card-footer-actions">
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="resize-outline"></ion-icon>
-                    </button>
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="heart-outline"></ion-icon>
-                    </button>
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="add-circle-outline"></ion-icon>
-                    </button>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
 
         </div>
       </section>
@@ -873,223 +538,80 @@ $pro = getAllProperties();
           <p class="section-subtitle">News & Blogs</p>
 
           <h2 class="h2 section-title">Leatest News Feeds</h2>
-
+          <?php 
+          if (mysqli_num_rows($result)>0){
+            ?>
           <ul class="blog-list has-scrollbar">
             <?php
               foreach ($result as $row){  ?>
                 <li>
                 <div class="blog-card">
 
-<figure class="card-banner">
-  <img src=<?= $row['topic_image']?> alt="The Most Inspiring Interior Design Of 2021" class="w-100">
-</figure>
-
-<div class="blog-content">
-
-  <div class="blog-content-top">
-
-    <ul class="card-meta-list">
-
-      <li>
-        <a href="#" class="card-meta-link">
-          <ion-icon name="person"></ion-icon>
-
-          <span>by: <?= $row['user_name']?></span>
-        </a>
-      </li>
-
-      <li>
-        <a href="#" class="card-meta-link">
-          <ion-icon name="pricetags"></ion-icon>
-
-          <span><?= $row['topic_name']?></span>
-        </a>
-      </li>
-
-    </ul>
-
-    <h3 class="h3 blog-title">
-      <a href="#"><?= $row['subject']?></a>
-    </h3>
-
-  </div>
-
-  <div class="blog-content-bottom">
-    <div class="publish-date">
-      <ion-icon name="calendar"></ion-icon>
-
-      <time datetime="2022-27-04"><?= $row['created_date']?></time>
-    </div>
-
-    <a href=".\blog.php?id=<?=$row["blog_id"]?>" class="read-more-btn">Read More</a>
-  </div>
-
-</div>
-
-</div>
-                </li>
-                <?php
-              }
-            ?>
-            <li>
-              <div class="blog-card">
-
                 <figure class="card-banner">
-                  <img src="./assets/images/blog-1.png" alt="The Most Inspiring Interior Design Of 2021" class="w-100">
+                  <img src=<?= $row['topic_image']?> alt="The Most Inspiring Interior Design Of 2021" class="w-100">
                 </figure>
 
-                <div class="blog-content">
+                  <div class="blog-content">
 
-                  <div class="blog-content-top">
+                    <div class="blog-content-top">
 
-                    <ul class="card-meta-list">
+                      <ul class="card-meta-list">
 
-                      <li>
-                        <a href="#" class="card-meta-link">
-                          <ion-icon name="person"></ion-icon>
+                        <li>
+                          <a href="#" class="card-meta-link">
+                            <ion-icon name="person"></ion-icon>
 
-                          <span>by: Admin</span>
-                        </a>
-                      </li>
+                            <span>by: <?= $row['user_name']?></span>
+                          </a>
+                        </li>
 
-                      <li>
-                        <a href="#" class="card-meta-link">
-                          <ion-icon name="pricetags"></ion-icon>
+                        <li>
+                          <a href="#" class="card-meta-link">
+                            <ion-icon name="pricetags"></ion-icon>
 
-                          <span>Interior</span>
-                        </a>
-                      </li>
+                            <span><?= $row['topic_name']?></span>
+                          </a>
+                        </li>
 
-                    </ul>
+                      </ul>
 
-                    <h3 class="h3 blog-title">
-                      <a href="#">The Most Inspiring Interior Design Of 2021</a>
-                    </h3>
+                      <h3 class="h3 blog-title">
+                        <a href="#"><?= $row['subject']?></a>
+                      </h3>
 
-                  </div>
-
-                  <div class="blog-content-bottom">
-                    <div class="publish-date">
-                      <ion-icon name="calendar"></ion-icon>
-
-                      <time datetime="2022-27-04">Apr 27, 2022</time>
                     </div>
 
-                    <a href="#" class="read-more-btn">Read More</a>
-                  </div>
+                    <div class="blog-content-bottom">
+                      <div class="publish-date">
+                        <ion-icon name="calendar"></ion-icon>
 
-                </div>
+                        <time datetime="2022-27-04"><?= $row['created_date']?></time>
+                      </div>
 
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/blog-2.jpg" alt="Recent Commercial Real Estate Transactions" class="w-100">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-content-top">
-
-                    <ul class="card-meta-list">
-
-                      <li>
-                        <a href="#" class="card-meta-link">
-                          <ion-icon name="person"></ion-icon>
-
-                          <span>by: Admin</span>
-                        </a>
-                      </li>
-
-                      <li>
-                        <a href="#" class="card-meta-link">
-                          <ion-icon name="pricetags"></ion-icon>
-
-                          <span>Estate</span>
-                        </a>
-                      </li>
-
-                    </ul>
-
-                    <h3 class="h3 blog-title">
-                      <a href="#">Recent Commercial Real Estate Transactions</a>
-                    </h3>
-
-                  </div>
-
-                  <div class="blog-content-bottom">
-                    <div class="publish-date">
-                      <ion-icon name="calendar"></ion-icon>
-
-                      <time datetime="2022-27-04">Apr 27, 2022</time>
+                      <a href=".\blog.php?id=<?=$row["blog_id"]?>" class="read-more-btn">Read More</a>
                     </div>
 
-                    <a href="#" class="read-more-btn">Read More</a>
                   </div>
 
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/blog-3.jpg" alt="Renovating a Living Room? Experts Share Their Secrets"
-                    class="w-100">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-content-top">
-
-                    <ul class="card-meta-list">
-
-                      <li>
-                        <a href="#" class="card-meta-link">
-                          <ion-icon name="person"></ion-icon>
-
-                          <span>by: Admin</span>
-                        </a>
-                      </li>
-
-                      <li>
-                        <a href="#" class="card-meta-link">
-                          <ion-icon name="pricetags"></ion-icon>
-
-                          <span>Room</span>
-                        </a>
-                      </li>
-
-                    </ul>
-
-                    <h3 class="h3 blog-title">
-                      <a href="#">Renovating a Living Room? Experts Share Their Secrets</a>
-                    </h3>
-
                   </div>
-
-                  <div class="blog-content-bottom">
-                    <div class="publish-date">
-                      <ion-icon name="calendar"></ion-icon>
-
-                      <time datetime="2022-27-04">Apr 27, 2022</time>
-                    </div>
-
-                    <a href="#" class="read-more-btn">Read More</a>
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
+                                  </li>
+                                  <?php
+                                }
+                              ?>
+                            
 
           </ul>
+          <?php
+          }else{
 
+            ?>
+             <p class="callout" style="
+    text-align: center;">
+              "there is no blogs to show "
+            </p>
+            <?php
+          }
+?>
         </div>
       </section>
 

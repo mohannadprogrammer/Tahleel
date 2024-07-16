@@ -1,10 +1,10 @@
 
 <?php
-    $title = 'Add Hospetl';
-    require_once './template/header.php';
+    require_once './template/admin_header.php';
     require_once './functions/database_functions.php';
     echo $_GET['id'];
     $row= getAllBlogsbyID($_GET['id']);
+    $title = 'Tahleel Real Estate - blog -'.  $row['subject'];
     
     ?>
     <main>

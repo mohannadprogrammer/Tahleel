@@ -555,7 +555,7 @@ button, a { transition: var(--transition); }
   font-size: var(--fs-5);
 }
 
-.about .callout {
+.callout {
   background: hsla(7, 78%, 53%, 0.05);
   color: var(--cadet);
   font-size: var(--fs-5);

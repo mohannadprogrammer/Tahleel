@@ -1,6 +1,6 @@
 
 <?php
-    $title = "Login";
+    $title = "Tahleel Real Estate - Login";
 	require "./template/header.php";
 	require_once "./functions/database_functions.php";
 

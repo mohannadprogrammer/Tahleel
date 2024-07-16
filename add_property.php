@@ -1,7 +1,7 @@
 
 <?php
-    $title = 'Add Hospetl';
-    require_once './template/header.php';
+    $title = 'Tahleel Real Estate - add property ';
+    require_once './template/admin_header.php';
     require_once './functions/database_functions.php';
     $name="";
     $email="";

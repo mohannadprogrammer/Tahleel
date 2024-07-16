@@ -1,7 +1,7 @@
 
 <?php
-    $title = 'Add Hospetl';
-    require_once './template/header.php';
+    $title = 'Tahleel Real Estate - Profile';
+    require_once './template/admin_header.php';
     require_once './functions/database_functions.php';
     if(isset( $_POST['opass']) && isset($_POST['npass'])) {
         $row = change_password($_SESSION['user_info']['id'],$_POST['opass'] ,$_POST['npass']);
