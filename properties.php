@@ -1,13 +1,15 @@
 
 <?php
-    $title = 'Tahleel Real Estate - Properties';
+    $title = 'Al-Tahleel Real Estate - Properties';
     require_once './template/admin_header.php';
     require_once './functions/database_functions.php';
     $name="";
     $email="";
     $phone="";
     $massage="";
-
+    if(isset($_GET['property_id_delete'])){
+        $row =  deleteProperty($_GET['property_id_delete']);
+    }
     $result1 = getAllProperties();
 
 
@@ -60,6 +62,17 @@
                 <td><?=$row['price']?></td>
                 <td><?=$row['city']?></td>
                 <td><?=$row['hood']?></td>
+                <td>
+                    <div style="display:flex;">
+                    <a href="properties.php?property_id_delete=<?= $row['pro_id']?>" style="margin:5px">
+                        <ion-icon name="close-outline" style="font-size:20px ;color:white;background-color:red;padding:5px; border-radius:5px;"></ion-icon>
+                    </a>
+                    <a href="add_property.php?property_id_edite=<?= $row['pro_id']?>" style="margin:5px">
+                        <ion-icon name="create-outline" style="font-size:20px ;color:white;background-color:gray ;padding:5px; border-radius:5px;"></ion-icon>
+
+                    </a>
+                        </div>
+                </td>
             </tr>
 
 <?php

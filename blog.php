@@ -4,7 +4,7 @@
     require_once './functions/database_functions.php';
     echo $_GET['id'];
     $row= getAllBlogsbyID($_GET['id']);
-    $title = 'Tahleel Real Estate - blog -'.  $row['subject'];
+    $title = 'Al-Tahleel Real Estate - blog -'.  $row['subject'];
     
     ?>
     <main>

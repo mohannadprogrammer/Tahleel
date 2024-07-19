@@ -1,13 +1,15 @@
 
 <?php
-    $title = 'Tahleel Real Estate - Messages';
+    $title = 'Al-Tahleel Real Estate - Messages';
     require_once './template/admin_header.php';
     require_once './functions/database_functions.php';
     $name="";
     $email="";
     $phone="";
     $massage="";
-
+    if(isset($_GET['messages_id_delete'])){
+        $row =  deleteMessage($_GET['messages_id_delete']);
+    }
     $result1 = getAllMessages();
 
 
@@ -41,10 +43,15 @@
 ?>
             <tr>
                 
-<td><?=$row['name']?></td>
+                <td><?=$row['name']?></td>
                 <td><?=$row['email']?></td>
                 <td><?=$row['phone_number']?></td>
                 <td><?=$row['message']?></td>
+                <td>
+                    <a href="masseges.php?messages_id_delete=<?= $row['id']?>">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </a>
+                </td>
             </tr>
 
 <?php

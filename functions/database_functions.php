@@ -50,10 +50,44 @@ function getAllProperties()
     return $result;
 }
 
-function deleteHospitle($id)
+function getPropertyById($id)
 {
     $conn = db_connect();
-    $query = "DELETE FROM `hospitle` where id_hospitle = ".$id;
+    $query = "SELECT * FROM `properties`  , `user`  WHERE  properties.user_id = user.id and pro_id = $id";
+    $result = mysqli_query($conn, $query);
+    if (!$result) {
+        echo 'get services price failed! '.mysqli_error($conn);
+        exit;
+    }
+    return mysqli_fetch_assoc($result);
+}
+
+function deleteProperty($id)
+{
+    $conn = db_connect();
+    $query = "DELETE FROM `properties` where pro_id = ".$id;
+    $result = mysqli_query($conn, $query);
+    if (!$result) {
+        echo 'get services  failed! '.mysqli_error($conn);
+        exit;
+    }
+    return true;
+}
+function deleteMessage($id)
+{
+    $conn = db_connect();
+    $query = "DELETE FROM `message` where id = ".$id;
+    $result = mysqli_query($conn, $query);
+    if (!$result) {
+        echo 'get services  failed! '.mysqli_error($conn);
+        exit;
+    }
+    return true;
+}
+function deleteBlog($id)
+{
+    $conn = db_connect();
+    $query = "DELETE FROM `blogs` where blog_id = ".$id;
     $result = mysqli_query($conn, $query);
     if (!$result) {
         echo 'get services  failed! '.mysqli_error($conn);

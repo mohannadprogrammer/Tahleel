@@ -1,13 +1,15 @@
 
 <?php
-    $title = 'Tahleel Real Estate - blogs ';
+    $title = 'Al-Tahleel Real Estate - blogs ';
     require_once './template/admin_header.php';
     require_once './functions/database_functions.php';
     $name="";
     $email="";
     $phone="";
     $massage="";
-
+    if(isset($_GET['blog_id_delete'])){
+        $row =  deleteBlog($_GET['blog_id_delete']);
+    }
     $result1 = getAllBlog();
 
 
@@ -54,6 +56,11 @@
                 <td><?=$row['created_date']?></td>
                 <td><?=$row['user_name']?></td>
                 <td><?=$row['topic_image']?></td>
+                <td>
+                    <a href="admin_blogs.php?blog_id_delete=<?= $row['blog_id']?>">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </a>
+                </td>
             </tr>
 
 <?php

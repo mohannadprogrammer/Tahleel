@@ -1,6 +1,6 @@
 
 <?php
-    $title = 'Tahleel Real Estate - Profile';
+    $title = 'Al-Tahleel Real Estate - Profile';
     require_once './template/admin_header.php';
     require_once './functions/database_functions.php';
     if(isset( $_POST['opass']) && isset($_POST['npass'])) {

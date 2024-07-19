@@ -1,6 +1,6 @@
 
     <?php
-    $title = 'Add Hospetl';
+    $title = 'Al-Tahleel  Real Estate - Contact us';
     require_once './template/header.php';
     require_once './functions/database_functions.php';
     $name="";

@@ -1,6 +1,6 @@
 
 <?php
-    $title = 'Tahleel Real Estate - add blog ';
+    $title = 'Al-Tahleel Real Estate - add blog ';
     require_once './template/admin_header.php';
     require_once './functions/database_functions.php';
     $name="";
