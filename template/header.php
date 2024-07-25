@@ -51,18 +51,18 @@ session_start();
         <ul class="header-top-list">
 
           <li>
-            <a href="mailto:info@homeverse.com" class="header-top-link">
+            <a href="mailto:tahleelgaferr111994@gmail.com" class="header-top-link">
               <ion-icon name="mail-outline"></ion-icon>
 
-              <span>info@homeverse.com</span>
+              <span>tahleelgaferr111994@gmail.com</span>
             </a>
           </li>
 
           <li>
-            <a href="#" class="header-top-link">
+            <a href="https://maps.app.goo.gl/WZsFDmcyXveAvFSk6" class="header-top-link" target="_blank">
               <ion-icon name="location-outline"></ion-icon>
 
-              <address>15/A, Nest Tower, NYC</address>
+              <address>43 10th St - Oud Metha - Dubai - United Arab Emirates</address>
             </a>
           </li>
 
@@ -114,7 +114,7 @@ session_start();
       <div class="container">
 
         <a href="#" class="logo">
-          <img src="./assets/images/logovername.svg" alt="Tahleel logo">
+          <img src="./assets/images/L2Rlogo.svg" alt="Tahleel logo">
         </a>
 
         <nav class="navbar" data-navbar>
@@ -122,7 +122,7 @@ session_start();
           <div class="navbar-top">
 
             <a href="#" class="logo">
-              <img src="./assets/images/logovername.svg" alt="Homeverse logo">
+              <img src="./assets/images/L2Rlogo.svg" alt="Al-tahleel Realestate logo">
             </a>
 
             <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
@@ -135,7 +135,7 @@ session_start();
             <ul class="navbar-list">
 
               <li>
-                <a href="./" class="navbar-link" data-nav-link>Home</a>
+                <a href="./#home" class="navbar-link" data-nav-link>Home</a>
               </li>
 
               <li>

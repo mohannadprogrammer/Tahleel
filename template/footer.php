@@ -11,42 +11,72 @@
         <div class="footer-brand">
 
           <a href="#" class="logo">
-            <img src="./assets/images/logolight.svg" alt="Al-Tahleel real estate" class="light-logo">
+            <img src="./assets/images/L2Rlogolight.svg" alt="Al-Tahleel real estate" class="light-logo">
           </a>
 
           <p class="section-text">
-            Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.
+          Discover Your Dream Property with Al-Tahleel Real Estate Brokerage, Your Trusted Partner in Real Estate
           </p>
 
-          <ul class="contact-list">
+          
+
+        </div>
+
+        <div class="footer-link-box">
+
+          <ul class="footer-list">
 
             <li>
-              <a href="#" class="contact-link">
-                <ion-icon name="location-outline"></ion-icon>
-
-                <address>Brooklyn, New York, United States</address>
-              </a>
+              <p class="footer-list-title">Company</p>
             </li>
 
             <li>
-              <a href="tel:+0123456789" class="contact-link">
-                <ion-icon name="call-outline"></ion-icon>
-
-                <span>+0123-456789</span>
-              </a>
+              <a href="#about" class="footer-link">About</a>
             </li>
 
             <li>
-              <a href="mailto:contact@homeverse.com" class="contact-link">
-                <ion-icon name="mail-outline"></ion-icon>
+              <a href="#blog" class="footer-link">Blog</a>
+            </li>
 
-                <span>contact@homeverse.com</span>
-              </a>
+            
+
+            <li>
+              <a href="https://maps.app.goo.gl/WZsFDmcyXveAvFSk6" target="_blank" class="footer-link">Locations Map</a>
+            </li>
+
+            
+
+            <li>
+              <a href="./contact.php" class="footer-link">Contact us</a>
             </li>
 
           </ul>
+          <ul class="contact-list">
+            <p class="footer-list-title">Contact us</p>
+            <li>
+              <a href="https://maps.app.goo.gl/WZsFDmcyXveAvFSk6" class="contact-link">
+                <ion-icon name="location-outline"></ion-icon>
 
-          <ul class="social-list">
+                <address>43 10th St - Oud Metha - Dubai - United Arab Emirates</address>
+              </a>
+            </li>
+
+            <li>
+              <a href="tel:+971522022135" class="contact-link">
+                <ion-icon name="call-outline"></ion-icon>
+
+                <span>+971 52 202 2135</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:tahleelgaferr111994@gmail.com" class="contact-link">
+                <ion-icon name="mail-outline"></ion-icon>
+
+                <span>tahleelgaferr111994@gmail.com</span>
+              </a>
+            </li>
+            <ul class="social-list">
 
             <li>
               <a href="#" class="social-link">
@@ -74,105 +104,11 @@
 
           </ul>
 
-        </div>
-
-        <div class="footer-link-box">
-
-          <ul class="footer-list">
-
-            <li>
-              <p class="footer-list-title">Company</p>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">About</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Blog</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">All Products</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Locations Map</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">FAQ</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Contact us</a>
-            </li>
-
           </ul>
 
-          <ul class="footer-list">
+          
 
-            <li>
-              <p class="footer-list-title">Services</p>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Order tracking</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Wish List</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Login</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">My account</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Terms & Conditions</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Promotional Offers</a>
-            </li>
-
-          </ul>
-
-          <ul class="footer-list">
-
-            <li>
-              <p class="footer-list-title">Customer Care</p>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Login</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">My account</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Wish List</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Order tracking</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">FAQ</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Contact us</a>
-            </li>
-
-          </ul>
+         
 
         </div>
 
@@ -183,7 +119,7 @@
       <div class="container">
 
         <p class="copyright">
-          &copy; 2022 <a href="#">codewithsadee</a>. All Rights Reserved
+          &copy; 2022 <a href="#">codewithsadee</a> & &copy; 2024 <a href="https://github.com/mohannadprogrammer">mohannadprogrammer</a>. All Rights Reserved
         </p>
 
       </div>

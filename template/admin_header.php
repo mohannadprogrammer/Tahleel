@@ -54,18 +54,18 @@ if (!isset($_SESSION['user_info']) && $_SESSION['user_info']['type']!=1){
         <ul class="header-top-list">
 
           <li>
-            <a href="mailto:info@homeverse.com" class="header-top-link">
+            <a href="mailto:tahleelgaferr111994@gmail.com" class="header-top-link">
               <ion-icon name="mail-outline"></ion-icon>
 
-              <span>info@homeverse.com</span>
+              <span>tahleelgaferr111994@gmail.com</span>
             </a>
           </li>
 
           <li>
-            <a href="#" class="header-top-link">
+            <a href="https://maps.app.goo.gl/WZsFDmcyXveAvFSk6" class="header-top-link" target="_blank">
               <ion-icon name="location-outline"></ion-icon>
 
-              <address>15/A, Nest Tower, NYC</address>
+              <address>43 10th St - Oud Metha - Dubai - United Arab Emirates</address>
             </a>
           </li>
 

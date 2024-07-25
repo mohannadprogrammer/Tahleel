@@ -22,7 +22,7 @@ $pro = getAllProperties();
             <p class="hero-subtitle">
               <ion-icon name="home"></ion-icon>
 
-              <span>Al-Tahleel Real Estate Brokerage</span>
+              <span>Al-Tahleel Real Estate</span>
             </p>
 
             <h2 class="h1 hero-title">Find Your Dream House By Us</h2>
@@ -30,13 +30,13 @@ $pro = getAllProperties();
             <p class="hero-text">
               Discover Your Dream Property with Al-Tahleel Real Estate Brokerage, Your Trusted Partner in Real Estate
             </p>
-
-            <button class="btn">Make An Enquiry</button>
-
+            <a href="./contact.php">
+              <button class="btn">Contact us</button>
+            </a>  
           </div>
 
           <figure class="hero-banner">
-            <img src="./assets/images/mainlogo.svg" alt="Modern house model" class="w-100">
+            <img src="./assets/images/hero-banner.png" alt="Modern house model" class="w-100">
           </figure>
 
         </div>
